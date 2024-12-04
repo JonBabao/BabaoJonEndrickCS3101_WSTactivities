@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  
+  a {
+    color: #b2ec5d;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ff5733;
+    text-decoration: underline;
+  }
+  
+  body {
+    background-color: #1d1f20;
+    color: #b2ec5d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0a0b0c;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-style: italic;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    perspective: 500px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(0deg);
+  }
+  
+  .card-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-side {
+    box-shadow: 0px 0px 15px 5px rgba(178, 236, 93, 0.5);
+  }
+  
+  .card-front {
+    background-color: #2e2f30;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding: 40px;
+  }
+  
+  .card-back {
+    background-color: #b2ec5d;
+    color: #1d1f20;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 1.5em;
+  }
+  
+  .card p {
+    font-size: 1.1em;
+  }
+
+  @media (max-width: 768px) {
+    .cards-container {
+      margin-top: 100px; 
+    }
+  }
+  

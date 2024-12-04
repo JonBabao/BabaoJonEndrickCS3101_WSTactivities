@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Act 4 - Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>My Profile</h1>
+    <p>A brief introduction</p>
+  </header>
+  <div class="cards-container">
+    <div class="card" onclick="toggleFlip(this)">
+      <div class="card-inner">
+        <div class="card-side card-front">
+          <h2>Basic Info</h2>
+          <p><b>Name:</b> Jon Endrick Babao</p>
+          <p><b>Date of Birth:</b> April 1, 2004</p>
+        </div>
+        <div class="card-side card-back">
+          <p><b>Who I Am</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="toggleFlip(this)">
+      <div class="card-inner">
+        <div class="card-side card-front">
+          <h2>Contact</h2>
+          <p><b>Email:</b> 22-01675@g.batstate-u.edu.ph</p>
+          <p>
+            <b>Github:</b>
+            <a href="https://github.com/JonBabao" target="_blank" rel="noopener noreferrer">
+              github.com/JonBabao
+            </a>
+          </p>
+        </div>
+        <div class="card-side card-back">
+          <p><b>How to Reach Me</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="toggleFlip(this)">
+      <div class="card-inner">
+        <div class="card-side card-front">
+          <h2>Personal Info</h2>
+          <p><b>Hobbies:</b> CTF, Anime, Manga/Manhwa, Gaming</p>
+          <p><b>Location:</b> Lipa City, Batangas, Philippines</p>
+        </div>
+        <div class="card-side card-back">
+          <p><b>More About Me</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
